@@ -6,7 +6,7 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md')) as r_file:
     readme = r_file.read()
 
 setup(name='cryptofy',
-      version='1.0.0',
+      version='1.0.1',
       description='Simple encryption/decryption functions for Python',
       long_description=readme,
       license='Apache 2.0',
