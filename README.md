@@ -25,21 +25,21 @@ print(key)  # Output randomized secret
 ```python
 from cryptofy import encoding, encrypt
 
-string = 'my-password'
-key = 'my-secret'
+string = "my-password"
+key = "my-secret"
 
 encrypted = encrypt(bytes(key, encoding=encoding), bytes(string, encoding))
 
-print(encrypted)  # Output encrypted string
+print(encrypted)  # Output ciphertext
 ```
 
-**Decrypt** a string:
+**Decrypt** ciphertext:
 
 ```python
 from cryptofy import encoding, decrypt
 
-encrypted = 'my-encrypted-password'
-key = 'my-secret'
+encrypted = "<ciphertext>"
+key = "my-secret"
 
 string = decrypt(bytes(key, encoding=encoding), encrypted).decode(encoding)
 
@@ -66,10 +66,10 @@ cryptofy -n
 cryptofy -e -k "my-secret" -s "my-password"
 ```
 
-**Example 3:** Decrypt a string:
+**Example 3:** Decrypt ciphertext:
 
 ```
-cryptofy -d -k "my-secret" -s "my-encrypted-password"
+cryptofy -d -k "my-secret" -s "<ciphertext>"
 ```
 
 ## License
